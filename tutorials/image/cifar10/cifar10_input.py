@@ -23,7 +23,8 @@ import os
 
 from six.moves import xrange  # pylint: disable=redefined-builtin
 import tensorflow as tf
-#from random import randint
+
+from random import random
 
 # Process images of this size. Note that this differs from the original CIFAR
 # image size of 32 x 32. If one alters this number, then the entire model
@@ -83,11 +84,18 @@ def read_cifar10(filename_queue):
   # Convert from a string to a vector of uint8 that is record_bytes long.
   record_bytes = tf.decode_raw(value, tf.uint8)
 
-  # The first bytes represent the label, which we convert from uint8->int32.
-  result.label = tf.random_uniform([1], 0, 10, dtype = tf.int32, seed = 0)
+  # === MODIFICATION starts ===
+  corrp = 0.3 #adjustable corruption rate, range 0.0-1.0
 
-#  result.label = tf.cast(
-#      tf.strided_slice(record_bytes, [0], [label_bytes]), tf.int32)
+  # The first bytes represent the label, which we convert from uint8->int32.
+  curr_val = random()
+  if  curr_val < (corrp * 1.0):
+  	result.label = tf.random_uniform([1], 0, 10, dtype = tf.int32, seed = 0)
+  else:
+    result.label = tf.cast(
+        tf.strided_slice(record_bytes, [0], [label_bytes]), tf.int32)
+
+  # === MODIFICATION ends ===
 
   # The remaining bytes after the label represent the image, which we reshape
   # from [depth * height * width] to [depth, height, width].
