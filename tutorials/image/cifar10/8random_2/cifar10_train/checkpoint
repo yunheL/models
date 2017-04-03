@@ -1,0 +1,6 @@
+model_checkpoint_path: "/afs/cs.wisc.edu/u/y/u/yunhe/private/ece699/models/tutorials/image/cifar10/8random_2/cifar10_train/model.ckpt-14722"
+all_model_checkpoint_paths: "/afs/cs.wisc.edu/u/y/u/yunhe/private/ece699/models/tutorials/image/cifar10/8random_2/cifar10_train/model.ckpt-9456"
+all_model_checkpoint_paths: "/afs/cs.wisc.edu/u/y/u/yunhe/private/ece699/models/tutorials/image/cifar10/8random_2/cifar10_train/model.ckpt-10677"
+all_model_checkpoint_paths: "/afs/cs.wisc.edu/u/y/u/yunhe/private/ece699/models/tutorials/image/cifar10/8random_2/cifar10_train/model.ckpt-12008"
+all_model_checkpoint_paths: "/afs/cs.wisc.edu/u/y/u/yunhe/private/ece699/models/tutorials/image/cifar10/8random_2/cifar10_train/model.ckpt-13452"
+all_model_checkpoint_paths: "/afs/cs.wisc.edu/u/y/u/yunhe/private/ece699/models/tutorials/image/cifar10/8random_2/cifar10_train/model.ckpt-14722"
