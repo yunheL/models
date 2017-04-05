@@ -1599,6 +1599,3 @@
 2017-04-02 23:12:10.488953: step 15980, loss = 0.83 (318.7 examples/sec; 0.402 sec/batch)
 2017-04-02 23:12:14.563199: step 15990, loss = 0.90 (314.2 examples/sec; 0.407 sec/batch)
 2017-04-02 23:12:18.662078: step 16000, loss = 0.75 (312.3 examples/sec; 0.410 sec/batch)
-2017-04-02 23:12:22.673872: step 16010, loss = 0.72 (319.1 examples/sec; 0.401 sec/batch)
-2017-04-02 23:12:26.750804: step 16020, loss = 0.86 (314.0 examples/sec; 0.408 sec/batch)
-2017-04-02 23:12:30.869634: step 16030, loss = 0.87 (310.8 examples/sec; 0.412 sec/batch)
