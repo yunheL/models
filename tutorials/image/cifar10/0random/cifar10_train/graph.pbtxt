@@ -3656,7 +3656,7 @@ node {
   attr {
     key: "capacity"
     value {
-      i: 20384
+      i: 388
     }
   }
   attr {
@@ -3677,7 +3677,7 @@ node {
   attr {
     key: "min_after_dequeue"
     value {
-      i: 20000
+      i: 4
     }
   }
   attr {
@@ -4097,7 +4097,7 @@ node {
         dtype: DT_INT32
         tensor_shape {
         }
-        int_val: 20000
+        int_val: 4
       }
     }
   }
@@ -4252,7 +4252,7 @@ node {
   }
 }
 node {
-  name: "shuffle_batch/fraction_over_20000_of_384_full/tags"
+  name: "shuffle_batch/fraction_over_4_of_384_full/tags"
   op: "Const"
   attr {
     key: "_output_shapes"
@@ -4276,15 +4276,15 @@ node {
         dtype: DT_STRING
         tensor_shape {
         }
-        string_val: "shuffle_batch/fraction_over_20000_of_384_full"
+        string_val: "shuffle_batch/fraction_over_4_of_384_full"
       }
     }
   }
 }
 node {
-  name: "shuffle_batch/fraction_over_20000_of_384_full"
+  name: "shuffle_batch/fraction_over_4_of_384_full"
   op: "ScalarSummary"
-  input: "shuffle_batch/fraction_over_20000_of_384_full/tags"
+  input: "shuffle_batch/fraction_over_4_of_384_full/tags"
   input: "shuffle_batch/mul"
   attr {
     key: "T"
@@ -10188,7 +10188,7 @@ node {
         dtype: DT_INT32
         tensor_shape {
         }
-        int_val: 136718
+        int_val: 27
       }
     }
   }
@@ -27659,7 +27659,7 @@ node {
   name: "Merge/MergeSummary"
   op: "MergeSummary"
   input: "input_producer/fraction_of_32_full"
-  input: "shuffle_batch/fraction_over_20000_of_384_full"
+  input: "shuffle_batch/fraction_over_4_of_384_full"
   input: "images"
   input: "conv1/conv1/conv1/activations"
   input: "conv1/conv1/conv1/sparsity"
@@ -27777,7 +27777,7 @@ node {
         dtype: DT_STRING
         tensor_shape {
         }
-        string_val: "_temp_a3750f83aeac42e4a1a3c340d770cc43/part"
+        string_val: "_temp_2cb212ccc3f44b20941d1503a4186d86/part"
       }
     }
   }
