@@ -147,8 +147,8 @@ class PTBModel(object):
     # The alternative version of the code below is:
     #
     # inputs = tf.unstack(inputs, num=num_steps, axis=1)
-    # outputs, state = tf.nn.rnn(cell, inputs,
-    #                            initial_state=self._initial_state)
+    # outputs, state = tf.contrib.rnn.static_rnn(
+    #     cell, inputs, initial_state=self._initial_state)
     outputs = []
     state = self._initial_state
     with tf.variable_scope("RNN"):
@@ -157,7 +157,7 @@ class PTBModel(object):
         (cell_output, state) = cell(inputs[:, time_step, :], state)
         outputs.append(cell_output)
 
-    output = tf.reshape(tf.concat(axis=1, values=outputs), [-1, size])
+    output = tf.reshape(tf.stack(axis=1, values=outputs), [-1, size])
     softmax_w = tf.get_variable(
         "softmax_w", [size, vocab_size], dtype=data_type())
     softmax_b = tf.get_variable("softmax_b", [vocab_size], dtype=data_type())
